@@ -1,48 +1,76 @@
 html {
     height: 100%;
-    background-color: #ffcb77;
+    background-color: #F2F6FA;
 }
-body {
-    background-color: #ffcb77!important;
-}
-
-i {
-    color: #fe6d73;
-}
-
-h1, h2, h3, h4, h5 {
-    color: #fef9ef;
-}
-
-.bg-
 
 #main {
-    background-color: #ffcb77;
+    background-color: #F2F6FA;
 }
 
-.points-wheel {
-    background-color: #227c9d;
-    border-radius: 100%;
-    height: 300px;
-    width: 300px;
-    flex-direction: column;
+
+.btn-link {
+    text-decoration: none!important;
+    color: #4d4d4d!important;
 }
 
-.points-wheel:after {
-    content: "";
-    position: absolute;
-    z-index: -999;
-    padding-top: 30px;
-    height: 400px;
-    width: 400px;
-    flex-direction: column;
-    background-color: #1d6681;
+.card {
+    border-radius: 30px!important;
 }
 
-.navigation-bar {
+.card-header {
+    border: none!important;
+    border-radius: 30px!important;
+}
+
+.sub-interactions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
     max-width: 500px;
+    background-color: #fff;
 }
 
-.intro-stats > .card {
-    background-color: #227c9d;
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+}
+
+.btn-add{
+    background-color: purple;
+    position: absolute;
+    color: white;
+    padding: 25px;
+    border-radius: 50%;
+    transform: translate(0px, -35px);
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    border: none;
+  }
+
+.btn-circle.btn-xl {
+    position: absolute;
+    transform: translate(0px, -40px);
+    background-color: purple!important;
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+    color: white;
 }

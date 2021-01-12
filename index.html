@@ -6,6 +6,8 @@
  
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="circle.css">
+    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
  
@@ -15,11 +17,8 @@
 <body>
     <section id="main">
         <div class="container" style="max-width:500px!important;">
-            <h1 class="text-center display-1 my-5 font-weight-bold">Reduce.</h1>
-            <div class="navigation-bar p-2 my-2 d-flex mx-auto">
-                <i class="fas fa-user-alt fa-2x ml-auto"></i>
-            </div>
-            <div class="points-wheel mt-5 mx-auto text-center text-white d-flex justify-content-center">
+            <h1 class="text-center display-3 my-5 font-weight-bold">Reduce.</h1>
+            <!-- <div class="points-wheel mt-5 mx-auto text-center text-white d-flex justify-content-center">
                 <span class="display-2">98</span>
                 <span>pts</span>
             </div>
@@ -69,6 +68,101 @@
                         <p class="card-text text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae amet fugiat debitis blanditiis, a adipisci itaque in ducimus temporibus recusandae consequatur! Quos fugit eius a at accusantium consequatur. Voluptatem, sunt.</p>
                     </div>
                 </div>
+            </div> -->
+            
+            <!--Rings-->
+            <div class="row no-gutters mx-auto text-center d-flex justify-content-center">
+                <div class="c100 p68 big">
+                    <span>68%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--League Text-->
+            <div class="row no-gutters d-flex align-items-center">
+                <h3 class="my-4 align-self-center">Your League</h2>
+                <h5 class="ml-auto my-4 align-self-end">View all <i class="fas fa-chevron-right fa-xs"></i></h5>
+            </div>
+
+            <!--League Cards-->
+            <div class="row no-gutters">
+                <div class="w-100" id="accordion">
+                    
+                    <div class="card mb-2">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <span class="pr-3">4</span><img src="james-barker-profile.jpg" width="50" height="50" style="border-radius:50%;"><span class="pl-3">James Barker</span><i class="far fa-arrow-alt-circle-down ml-auto"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="sub-interactions">
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                </ul>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="pr-3">5</span><img src="emilia-hurley-profile.jpg" width="50" height="50" style="border-radius:50%;"><span class="pl-3">Emilia Hurley</span><i class="far fa-arrow-alt-circle-down ml-auto"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="sub-interactions">
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                            <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span class="pr-3">6</span><img src="fredrica-profile.jpg" width="50" height="50" style="border-radius:50%;"><span class="pl-3">Fredrica Wampler</span><i class="far fa-arrow-alt-circle-down ml-auto"></i>
+                            </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="sub-interactions">
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Navigation-->
+            <div class="row no-gutters d-flex justify-content-center fixed-bottom w-100">
+                <ul class="navigation d-flex justify-content-around w-100">
+                    <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-th-large"></i>Dashboard</li>
+                    <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-bars"></i>League</li>
+                    <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-chart-bar"></i>Summary</li>
+                    <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-user-alt"></i>Dashboard</li>
+                </ul>
+                <button class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
             </div>
         </div>
     </section>
