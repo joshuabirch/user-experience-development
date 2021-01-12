@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+    background-color: #ffcb77;
+}
+body {
+    background-color: #ffcb77!important;
+}
+
+i {
+    color: #fe6d73;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #fef9ef;
+}
+
+.bg-
+
+#main {
+    background-color: #ffcb77;
+}
+
+.points-wheel {
+    background-color: #227c9d;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    flex-direction: column;
+}
+
+.points-wheel:after {
+    content: "";
+    position: absolute;
+    z-index: -999;
+    padding-top: 30px;
+    height: 400px;
+    width: 400px;
+    flex-direction: column;
+    background-color: #1d6681;
+}
+
+.navigation-bar {
+    max-width: 500px;
+}
+
+.intro-stats > .card {
+    background-color: #227c9d;
+}
