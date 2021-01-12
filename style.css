@@ -15,6 +15,14 @@ a {
     background-color: #F2F6FA;
 }
 
+.progress-ring-labels {
+    font-weight: bold;
+    color: #3D2388;
+}
+
+.c100 {
+    margin: 0!important;
+}
 
 .c100 .bar, .fill {
     border-color: #3D2388!important;
@@ -22,6 +30,10 @@ a {
 
 .c100 > span {
     color: #3D2388!important;
+    font-size: 3rem!important;
+    line-height: 3rem!important;
+    padding-top: 80px;
+    font-weight: bold;
 }
 
 
@@ -42,6 +54,10 @@ a {
     box-shadow: 0px 3px 3px #aaaaaa;
 }
 
+.user-bg {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD); 
+}
+
 .profile-img {
     border: solid 3px #BB37AD;
 }
@@ -55,6 +71,8 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-weight: bold;
+    color: #3D2388;
 }
 
 .navigation {
@@ -68,8 +86,10 @@ a {
     padding: 0;
     height: 90px;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px; 
+    border-top-right-radius: 20px;
 }
+
+
 
 
 .btn-circle {
@@ -86,7 +106,7 @@ a {
 .btn-circle.btn-xl {
     position: absolute;
     transform: translate(10px, -40px);
-    background-color: purple!important;
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD); 
     width: 70px;
     height: 70px;
     padding: 10px 16px;
@@ -96,11 +116,17 @@ a {
     color: white;
 }
 
+.nav-item {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4d4d4d;
+}
+
 
 
 /* Icon Colours */
 
-.fa-th-large {
+.fa-th-large, .fa-gamepad, .fa-users, .fa-beer {
     color: #3D2388!important; 
 }
 
