@@ -1,3 +1,65 @@
+@font-face {
+font-family: 'SF UI Display Ultralight';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Ultralight'), url('SF font/sf-ui-display-ultralight-58646b19bf205.woff') format('woff');
+}
+
+    
+@font-face {
+font-family: 'SF UI Display Thin';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Thin'), url('SF font/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Light';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Light'), url('SF font/sf-ui-display-light-58646b33e0551.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Medium';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Medium'), url('SF font/sf-ui-display-medium-58646be638f96.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Semibold';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Semibold'), url('SF font/sf-ui-display-semibold-58646eddcae92.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Bold';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Bold'), url('SF font/sf-ui-display-bold-58646a511e3d9.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Heavy';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Heavy'), url('SF font/sf-ui-display-heavy-586470160b9e5.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF UI Display Black';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Display Black'), url('SF font/sf-ui-display-black-58646a6b80d5a.woff') format('woff');
+}
 html {
     height: 100%;
     background-color: #F2F6FA;
@@ -7,8 +69,9 @@ a {
     text-decoration: none;
 }
 
-.link-dark, h1, h2, h3, h4 ,h5, p, a {
+.link-dark, h1, h2, h3, h4 ,h5, a, li {
     color: #4d4d4d!important;
+    font-family: 'SF UI Display Bold';
 }
 
 #main {
@@ -16,11 +79,12 @@ a {
 }
 
 .progress-ring-labels::part(label) {
-    margin-top: 80px;
+    margin-top: 90px;
     font-size: 50px;
     font-weight: bold;
     color: #3D2388;
     display: block;
+    font-family: 'SF UI Display Bold';
 }
 
 .progress-ring-labels::part(label)::after {
@@ -29,6 +93,8 @@ a {
     color: #3D2388;
     font-size: 16px;
     display: block;
+    margin-top: -15px;
+    font-family: 'SF UI Display Bold';
 }
 
 
@@ -112,9 +178,9 @@ a {
 }
 
 .nav-item {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
     color: #4d4d4d;
+    font-family: 'SF UI Display Light';
 }
 
 
@@ -127,7 +193,7 @@ a {
     display: block;
     margin: 0 auto;
     position: absolute;
-    transform: translate(140px, -57px);
+    transform: translate(140px, -59.55px);
     background-color: #aaaaaa;
 }
 
@@ -144,6 +210,7 @@ a {
 .daily-ring::part(label) {
     font-size: 12px;
     font-weight: bold;
+    font-family: 'SF UI Display Bold';
 }
 
 #minus-btn::part(base), #add-btn::part(base) {
@@ -160,11 +227,14 @@ a {
     font-size: 2.5rem;
     font-weight: bold;
     color: #BB37AD;
+    font-family: 'SF UI Display Bold';
 }
 
 .btn-lg-add {
     background-image: linear-gradient(45deg, #3D2388, #BB37AD);
     border-radius: 20px!important;
+    font-size: 20px!important;
+    font-family: 'SF UI Display Bold';
 }
 
 
