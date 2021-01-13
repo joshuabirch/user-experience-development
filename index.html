@@ -83,10 +83,11 @@
                     stroke-width="20"
                     style="--track-color: #ffffff; --indicator-color: #3d2388;"
                 >
-                    <div class="d-flex align-items-center justify-content-center flex-column">
+                68
+                    <!-- <div class="d-flex align-items-center justify-content-center flex-column">
                         <span style="font-size:50px;">68</span>
                         <span style="font-size:16px;">pts</span>
-                    </div>
+                    </div> -->
                 </sl-progress-ring>
 
                 <!-- <div class="c100 p68 big">
@@ -182,13 +183,41 @@
 
             <!--Navigation-->
             <div class="row no-gutters d-flex justify-content-center fixed-bottom w-100">
+                
                 <ul class="navigation d-flex justify-content-around w-100">
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-th-large fa-lg pb-1"></i><span class="nav-item">Dashboard</span></li>
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-bars fa-lg pb-1"></i><span class="nav-item">League</span></li>
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-chart-bar fa-lg pb-1"></i><span class="nav-item">Summary</span></li>
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-user-alt fa-lg pb-1"></i><span class="nav-item">Profile</span></li>
                 </ul>
-                <button class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
+                
+                <sl-drawer placement="bottom" class="drawer-placement-bottom" style="max-width:500px;--size:30vw;">
+                    <h3 id="drawerTitle" class="text-center font-weight-bold px-5">How many drinks have you had today?</h3>
+                    <p class="text-center">your daily average: 8 drinks</p>
+                    
+                    <div class="d-flex justify-content-center align-items-center">
+                        <sl-progress-ring class="daily-ring" percentage="90" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">M</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="70" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="60" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">W</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="40" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="50" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">F</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="70" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
+                        <sl-progress-ring class="daily-ring" percentage="68" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center mt-2">
+                        <sl-button id="minus-btn" circle><sl-icon name="dash"></sl-icon></sl-button>
+                        <sl-progress-ring class="add-ring" percentage="0" size="220" stroke-width="15" style="--track-color: #eeeeee; --indicator-color: #3D2388;">0</sl-progress-ring>
+                        <sl-button id="add-btn" circle><sl-icon name="plus"></sl-icon></sl-button>
+                    </div>
+
+                    <div class="d-grid">
+                        <button id="drawerAdd" class="btn btn-lg-add w-100 text-white font-weight-bold py-3 mt-1" type="button">Add Drinks</button>
+                    </div>
+
+                </sl-drawer>
+
+                <button id="addBtn" class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
             </div>
         </div>
     </section>
@@ -196,6 +225,46 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
- 
+
+    <script>
+        (() => {
+            const drawer = document.querySelector('.drawer-placement-bottom');
+            const openButton = drawer.nextElementSibling;
+            const closeButton = drawer.querySelector('sl-button[type="primary"]');
+      
+            openButton.addEventListener('click', () => drawer.show());
+            closeButton.addEventListener('click', () => drawer.hide());
+        })();
+    </script>
+
+    <script>
+        const progressRing = document.querySelector('.add-ring');
+        const subtractButton = document.getElementById('minus-btn');
+        const addButton = document.getElementById('add-btn');
+
+        const homeRing = document.querySelector('.progress-ring-labels');
+        const addDrinksButton = document.getElementById('drawerAdd');
+    
+        addButton.addEventListener('click', () => {
+        const percentage = Math.min(100, progressRing.percentage + 10);
+        progressRing.percentage = percentage;
+        progressRing.textContent = `${percentage}`;
+        });
+    
+        subtractButton.addEventListener('click', () => {
+        const percentage = Math.max(0, progressRing.percentage - 10)
+        progressRing.percentage = percentage;
+        progressRing.textContent = `${percentage}`;
+        });
+
+        
+        addDrinksButton.addEventListener('click', () => {
+        const percentage = progressRing.percentage;
+        const homeRingPercentage = homeRing.percentage;
+        const diff = homeRingPercentage - percentage;
+        homeRing.percentage = diff;
+        homeRing.textContent = `${diff}`;
+        });
+    </script>
 </body>
 </html>

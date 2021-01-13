@@ -15,25 +15,20 @@ a {
     background-color: #F2F6FA;
 }
 
-.progress-ring-labels {
+.progress-ring-labels::part(label) {
+    margin-top: 80px;
+    font-size: 50px;
     font-weight: bold;
     color: #3D2388;
+    display: block;
 }
 
-.c100 {
-    margin: 0!important;
-}
-
-.c100 .bar, .fill {
-    border-color: #3D2388!important;
-}
-
-.c100 > span {
-    color: #3D2388!important;
-    font-size: 3rem!important;
-    line-height: 3rem!important;
-    padding-top: 80px;
-    font-weight: bold;
+.progress-ring-labels::part(label)::after {
+    content: 'pts';
+    text-align: center;
+    color: #3D2388;
+    font-size: 16px;
+    display: block;
 }
 
 
@@ -122,6 +117,45 @@ a {
     color: #4d4d4d;
 }
 
+
+
+#drawerTitle::before {
+    content: '';
+    width: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(140px, -57px);
+    background-color: #aaaaaa;
+}
+
+.drawer-placement-bottom::part(base),.drawer-placement-bottom::part(overlay)  {
+    max-width: 500px!important;
+    left: 37.2%;
+}
+
+.drawer-placement-bottom::part(panel) {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.daily-ring::part(label) {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.add-ring::part(label) {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #BB37AD;
+}
+
+.btn-lg-add {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+    border-radius: 20px!important;
+}
 
 
 /* Icon Colours */
