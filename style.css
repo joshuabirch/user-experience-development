@@ -146,6 +146,16 @@ a {
     font-weight: bold;
 }
 
+#minus-btn::part(base), #add-btn::part(base) {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+}
+
+
+#minus-btn::part(label), #add-btn::part(label) {
+    color: #fff;
+    font-size: 30px;
+}
+
 .add-ring::part(label) {
     font-size: 2.5rem;
     font-weight: bold;
