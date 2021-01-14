@@ -2,25 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!--Meta data for mobile reponsiveness-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
+    <!--Local Stylesheet-->
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="circle.css">
     
+    <!--Fontawesome CDN link-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
- 
+
+    <!--Bootstrap CDN Link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     
     
+    <!--Shoelace CDN Link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.25/dist/shoelace/shoelace.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.25/dist/shoelace/shoelace.esm.js"></script>
 
+
+    <!--Phaser JS plugin intialise and basketball external JS-->
+    <script type="text/javascript" src="phaser.min.js"></script>
+    <script type="text/javascript" src="basketball.js"></script>
+    <!--Title of Page-->
     <title>Reduce.</title>
 </head>
 <body>
+
+    <!--Main Section-->
     <section id="main">
+        <!--Custom Container-->
         <div class="container" style="max-width:500px!important;">
             <!-- <div class="points-wheel mt-5 mx-auto text-center text-white d-flex justify-content-center">
                 <span class="display-2">98</span>
@@ -84,19 +96,8 @@
                     style="--track-color: #ffffff; --indicator-color: #3d2388;"
                 >
                 68
-                    <!-- <div class="d-flex align-items-center justify-content-center flex-column">
-                        <span style="font-size:50px;">68</span>
-                        <span style="font-size:16px;">pts</span>
-                    </div> -->
                 </sl-progress-ring>
 
-                <!-- <div class="c100 p68 big">
-                    <span class="d-flex justify-content-center align-items-center flex-column">68<span class="align-self-center" style="font-size:20px;">pts</span></span>
-                    <div class="slice">
-                        <div class="bar"></div>
-                        <div class="fill"></div>
-                    </div>
-                </div> -->
             </div>
 
             <!--League Text-->
@@ -123,10 +124,26 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
                                 <ul class="sub-interactions">
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-gamepad pr-2"></i>
+                                        <a id="send-challenge" class="w-100 pe-auto">Send a Challenge</a>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-chart-bar pr-2"></i>
+                                        <a id="compare-statistics" class="w-100 pe-auto">Compare Statistics</a>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-users pr-2"></i>
+                                        <a id="pub-quiz" class="w-100 pe-auto">Compete in a Pub Quiz</a>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-beer pr-2"></i>
+                                        <a id="share-bill" class="w-100 pe-auto">Share a Bill</a>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
                                 </ul>
                           </div>
                         </div>
@@ -146,10 +163,26 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
                                 <ul class="sub-interactions">
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-gamepad pr-2"></i>
+                                        Send a Challenge
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-chart-bar pr-2"></i>
+                                        Compare Statistics
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-users pr-2"></i>
+                                        Compete in a Pub Quiz
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-beer pr-2"></i>
+                                        Share a Bill
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -169,10 +202,26 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
                                 <ul class="sub-interactions">
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-gamepad pr-2"></i> Send a Challenge <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-chart-bar pr-2"></i> Compare Statistics <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-users pr-2"></i> Compete in a Pub Quiz <i class="fas fa-chevron-right ml-auto"></i></li>
-                                    <li class="mb-2 d-flex align-items-center"><i class="fas fa-beer pr-2"></i> Share a Bill <i class="fas fa-chevron-right ml-auto"></i></li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-gamepad pr-2"></i>
+                                        Send a Challenge
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-chart-bar pr-2"></i>
+                                        Compare Statistics
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-users pr-2"></i>
+                                        Compete in a Pub Quiz
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-center">
+                                        <i class="fas fa-beer pr-2"></i>
+                                        Share a Bill
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -184,6 +233,7 @@
             <!--Navigation-->
             <div class="row no-gutters d-flex justify-content-center fixed-bottom w-100">
                 
+                <!--Actual Navigation Bar-->
                 <ul class="navigation d-flex justify-content-around w-100">
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-th-large fa-lg pb-1"></i><span class="nav-item">Dashboard</span></li>
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-bars fa-lg pb-1"></i><span class="nav-item">League</span></li>
@@ -191,10 +241,12 @@
                     <li class="align-self-center d-flex align-items-center flex-column"><i class="fas fa-user-alt fa-lg pb-1"></i><span class="nav-item">Profile</span></li>
                 </ul>
                 
+                <!--Add Drinks Drawer-->
                 <sl-drawer placement="bottom" class="drawer-placement-bottom" style="max-width:500px;--size:30vw;">
                     <h3 id="drawerTitle" class="text-center font-weight-bold px-5">How many drinks have you had today?</h3>
                     <p class="text-center" style="font-family:SF UI Display Light;">your daily average: 8 drinks</p>
                     
+                    <!--Daily Rings-->
                     <div class="d-flex justify-content-center align-items-center">
                         <sl-progress-ring class="daily-ring" percentage="90" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">M</sl-progress-ring>
                         <sl-progress-ring class="daily-ring" percentage="70" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
@@ -205,20 +257,113 @@
                         <sl-progress-ring class="daily-ring" percentage="68" size="45" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
                     </div>
 
+                    <!--Main Add Ring-->
                     <div class="d-flex justify-content-center align-items-center mt-2">
                         <sl-button size="large" id="minus-btn" circle><sl-icon name="dash"></sl-icon></sl-button>
                         <sl-progress-ring class="add-ring" percentage="0" size="220" stroke-width="15" style="--track-color: #eeeeee; --indicator-color: #3D2388;">0</sl-progress-ring>
                         <sl-button size="large" id="add-btn" circle><sl-icon name="plus"></sl-icon></sl-button>
                     </div>
 
+                    <!--Add Drinks Button-->
                     <div class="d-grid">
                         <button id="drawerAdd" class="btn btn-lg-add w-100 text-white font-weight-bold py-3 mt-1" type="button">Add Drinks</button>
                     </div>
 
                 </sl-drawer>
 
+                <!--Sub-Interactions-->
+
+                <!--Basketball-->
+                <sl-drawer placement="bottom" class="basketball" style="--size:47vw;">
+                    <h3 id="drawerTitle" class="text-center font-weight-bold px-5">Basketball</h3>
+                    <div id="basketball-phaser-game" class="d-flex justify-content-center"></div>
+                </sl-drawer>
+
+                <!--Compare Statistics-->
+                <sl-drawer placement="bottom" class="compare-statistics" style="--size:47vw;">
+                    <h3 id="drawerTitle" class="text-center font-weight-bold px-5">How Does Your Stats Compare With James?</h3>
+                    <div class="px-4 mt-4">
+                        <div class="row d-flex align-items-center">
+                            <img class="profile-img mr-2" src="james-barker-profile.jpg" width="70" height="70" style="border-radius:50%;border:none;">
+                            <span class="name-tags font-weight-bold align-self-center" style="font-size:20px;color:#3D2388;">James Barker</span>
+                            <span class="name-tags font-weight-bold align-self-center ml-auto" style="font-size:20px;color:#BB37AD">Emilia Hurley</span> 
+                            <img class="profile-img ml-2" src="emilia-hurley-profile.jpg" width="70" height="70" style="border-radius:50%;border:none;">
+                        </div>
+                        <div class="row">
+                            <div class="col-6 d-flex flex-column justify-content-center mt-3" style="color:#3D2388;">
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Total Drinks So far</span>
+                                    <span>57</span>
+                                </div>
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Est. Money Spent</span>
+                                    <span>£285</span>
+                                </div>
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Rolling Average</span>
+                                    <span>1.83</span>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex flex-column justify-content-center mt-3" style="color:#BB37AD;">
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Total Drinks So far</span>
+                                    <span>42</span>
+                                </div>
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Est. Money Spent</span>
+                                    <span>£210</span>
+                                </div>
+                                <div class="card info-card py-2 mt-3 text-center">
+                                    <span>Rolling Average</span>
+                                    <span>1.35</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center align-items-center mt-5">
+                            <h4 class="font-weight-bold">Weekly Progress</h4>
+                            <div class="d-flex align-items-center">
+                                <div class="chart">
+                                    <div class="barchart-1"></div>
+                                    <div class="barchart-2"></div>
+                                </div>
+                                <div class="chart">
+                                    <div class="barchart-3"></div>
+                                    <div class="barchart-4"></div>
+                                </div>
+                                <div class="chart">
+                                    <div class="barchart-5"></div>
+                                    <div class="barchart-6"></div>
+                                </div>
+                                <div class="chart">
+                                    <div class="barchart-7"></div>
+                                    <div class="barchart-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-6">
+                                <div class="card info-card py-2 mt-3 text-center" style="color:#3D2388;">
+                                    <span>Drink Free Days</span>
+                                    <span>11</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card info-card py-2 mt-3 text-center" style="color:#BB37AD;">
+                                    <span>Drink Free Days</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sl-drawer>
+
+                <!--Quiz-->
+
+                <!--Share a Bill-->
+
+                <!--Add Button on Navigation-->
                 <button id="addBtn" class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
-            </div>
+            </div>     
         </div>
     </section>
 
@@ -230,7 +375,7 @@
         //initialise Shoelace drawer and add event listeners to toggle the drawer
         (() => {
             const drawer = document.querySelector('.drawer-placement-bottom');
-            const openButton = drawer.nextElementSibling;
+            const openButton = document.getElementById('addBtn');
             const closeButton = drawer.querySelector('sl-button[type="primary"]');
 
             openButton.addEventListener('click', () => drawer.show());
@@ -239,7 +384,28 @@
     </script>
 
     <script>
+        (() => {
+            const drawer = document.querySelector('.basketball');
+            const openButton = document.getElementById('send-challenge');
+            const closeButton = drawer.querySelector('sl-button[type="primary"]');
+    
+            openButton.addEventListener('click', () => drawer.show());
+            closeButton.addEventListener('click', () => drawer.hide());
+        })();
+    </script>
 
+    <script>
+         (() => {
+            const drawer = document.querySelector('.compare-statistics');
+            const openButton = document.getElementById('compare-statistics');
+            const closeButton = drawer.querySelector('sl-button[type="primary"]');
+
+            openButton.addEventListener('click', () => drawer.show());
+            closeButton.addEventListener('click', () => drawer.hide());
+        })();
+    </script>
+
+    <script>
         //add functionality to the add drinks ring
 
         //gather elements in the document - the sl-progress-ring, add button and minus button via classes & ID's 
@@ -253,24 +419,25 @@
 
         //gather drawer element
         const drawer = document.querySelector('.drawer-placement-bottom');
-    
+
+
         //add event listener to the add button to increase the progress by 10
         addButton.addEventListener('click', () => {
         const percentage = Math.min(100, progressRing.percentage + 10);
         progressRing.percentage = percentage;
-        progressRing.textContent = `${percentage}`;
+        progressRing.textContent = `${percentage}` / 10;
         });
         
         //add event listener to the minus button to decrease the progress by 10
         subtractButton.addEventListener('click', () => {
         const percentage = Math.max(0, progressRing.percentage - 10);
         progressRing.percentage = percentage;
-        progressRing.textContent = `${percentage}`;
+        progressRing.textContent = `${percentage}` / 10;
         });
 
         //add event listener to the add drink button
         addDrinksButton.addEventListener('click', () => {
-        const percentage = progressRing.percentage;
+        const percentage = progressRing.percentage / 10;
         const homeRingPercentage = homeRing.percentage;
         const diff = homeRingPercentage - percentage;
         

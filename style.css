@@ -78,6 +78,7 @@ a {
     background-color: #F2F6FA;
 }
 
+
 .progress-ring-labels::part(label) {
     margin-top: 90px;
     font-size: 50px;
@@ -183,8 +184,6 @@ a {
     font-family: 'SF UI Display Light';
 }
 
-
-
 #drawerTitle::before {
     content: '';
     width: 100px;
@@ -197,16 +196,23 @@ a {
     background-color: #aaaaaa;
 }
 
-.drawer-placement-bottom::part(base),.drawer-placement-bottom::part(overlay)  {
+.drawer-placement-bottom::part(base),
+.drawer-placement-bottom::part(overlay),
+.compare-statistics::part(base),
+.compare-statistics::part(overlay),
+.basketball::part(base),
+.basketball::part(overlay)   {
     max-width: 500px!important;
     left: 37.2%;
 }
 
-.drawer-placement-bottom::part(body) {
+.drawer-placement-bottom::part(body){
     overflow-y: hidden;
 }
 
-.drawer-placement-bottom::part(panel) {
+.drawer-placement-bottom::part(panel),
+.compare-statistics::part(panel),
+.basketball::part(panel) {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
@@ -240,6 +246,94 @@ a {
     font-size: 20px!important;
     font-family: 'SF UI Display Bold';
 }
+
+/* Sub-Interaction Styling */
+.name-tags {
+    font-family: 'SF UI Display Bold';
+}
+
+.info-card {
+    border-radius: 10px!important;
+    background-color: #F2F6FA!important;
+    box-shadow: 0px 3px 3px #aaaaaa;
+    font-family: 'SF UI Display Bold';
+    border: none!important;
+    width: 150px;
+}
+
+.info-card > span:nth-child(1) {
+    font-size: 12px;
+}
+
+.info-card > span:nth-child(2) {
+    font-size: 36px;
+}
+
+.chart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    grid-column-gap: 10px;
+    height: 200px;
+    width: 100px;
+    padding: 5px 10px;
+  }
+  
+[class*="barchart"] {
+    margin: 0;
+    padding: 0;
+    border-radius: 50px 50px 0 0;
+    transition: all .6s ease;
+    grid-row-end: 120;
+}
+
+.barchart-1 {    
+    grid-row-start: 1;
+}
+
+.barchart-2 {
+    grid-row-start: 30;
+}
+
+.barchart-3 {
+    grid-row-start: 20;
+}
+
+.barchart-4 {
+    grid-row-start: 50;
+}
+.barchart-5 {
+    grid-row-start: 20;
+}
+
+.barchart-6 {
+    grid-row-start: 50;
+}
+.barchart-7 {
+    grid-row-start: 20;
+}
+
+.barchart-8 {
+    grid-row-start: 50;
+}
+
+[class*="barchart"]:nth-child(odd) {
+    background-color: #3D2388; 
+}
+   
+[class*="barchart"]:nth-child(even) {
+    background-color: #BB37AD;
+}
+
+.chart > span {
+    position: relative;
+}
+
+
+
+
+
+
 
 
 /* Icon Colours */
