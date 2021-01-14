@@ -61,9 +61,9 @@ function create() {
 	game.stage.backgroundColor = "#ffffff";
 
 	// high_score_text = game.add.text(450, 25, 'High Score\n' + high_score, { font: 'Arial', fontSize: '32px', fill: '#000', align: 'center' });
-	current_score_text = game.add.text(187, 312, '', { font: 'Arial', fontSize: '40px', fill: '#000', align: 'center' }); // 300, 500
-	current_best_text = game.add.text(143, 281, '', { font: 'Arial', fontSize: '20px', fill: '#000', align: 'center' });// 230, 450
-	current_best_score_text = game.add.text(187, 312, '', { font: 'Arial', fontSize: '40px', fill: '#00e6e6', align: 'center' }); // 300, 500
+	current_score_text = game.add.text(187, 312, '', { font: 'SF UI Display Bold', fontSize: '40px', fill: '#4D4D4D', align: 'center' }); // 300, 500
+	current_best_text = game.add.text(143, 281, '', { font: 'SF UI Display Bold', fontSize: '20px', fill: '#4D4D4D', align: 'center' });// 230, 450
+	current_best_score_text = game.add.text(187, 312, '', { font: 'SF UI Display Bold', fontSize: '40px', fill: '#3D2388', align: 'center' }); // 300, 500
 
 	hoop = game.add.sprite(88, 62, 'hoop'); // 141, 100
 	left_rim = game.add.sprite(150, 184, 'side rim'); // 241, 296
