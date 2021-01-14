@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--Meta data for mobile reponsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!--Local Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--Fontawesome CDN link-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <!--Bootstrap CDN Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    
+    <!--Shoelace CDN Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.25/dist/shoelace/shoelace.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.25/dist/shoelace/shoelace.esm.js"></script>
+
+
+    <!--Title of Page-->
+    <title>Reduce.</title>
+</head>
+<body>
+    <!--Main Section-->
+    <section id="main">
+        <!--Custom Container-->
+        <div class="container" style="max-width:500px!important;">
+
+            <div class="row d-flex justify-content-center align-items-end" style="margin-top: 5rem;">
+                <h1 class="w-75 text-center">Black Country Squad</h1>
+                <i class="fas fa-ellipsis-h text-white" style="background-color:#BB37AD;padding:5px;border-radius:50%;"></i>
+            </div>  
+                
+
+
+                <!--Entire League-->
+                <!--League Cards-->
+                <div class="row no-gutters">
+                    <!--Active Challenge-->
+                    <div class="card-group challenge-active mt-5 mb-2 w-100">
+                    <div class="card icon-left-card" style="flex-grow: .2">
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <i class="fas fa-wine-glass fa-lg text-white"></i>
+                        </div>
+                    </div>
+                    <div class="card challenge-content-card">
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <div class="row w-100">
+                                <div class="col-10 d-flex flex-column">
+                                    <span>Challenge Active</span>
+                                    <span>7 Days Drink Free</span>
+                                </div>
+                                <div class="col-2 d-flex align-items-center">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="w-100" id="accordion">
+                        
+                        <div class="card league-card mb-2">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">1</span>
+                                        <img class="profile-img" src="james-barker-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                        <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">Tom Waldron</span>
+                                        <span class="ml-auto points px-3 d-flex flex-column align-items-center">88<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            <a id="send-challenge" class="w-100 pe-auto">Send a Challenge</a>
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            <a id="compare-statistics" class="w-100 pe-auto">Compare Statistics</a>
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            <a id="pub-quiz" class="w-100 pe-auto">Compete in a Pub Quiz</a>
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            <a id="share-bill" class="w-100 pe-auto">Share a Bill</a>
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card mb-2">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">2</span>
+                                        <img class="profile-img" src="emilia-hurley-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                        <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">Georgia Harris</span>
+                                        <span class="ml-auto points px-3 d-flex flex-column align-items-center">79<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card mb-2">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">3</span>
+                                    <img class="profile-img" src="james-barker-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                    <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">James Barker</span>
+                                    <span class="ml-auto points px-3 d-flex flex-column align-items-center">74<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card mb-2">
+                            <div class="card-header user-bg" id="headingFour">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <span class="pr-3 font-weight-bold text-white" style="font-size: 24px!important;">4</span>
+                                    <img class="profile-img" src="emilia-hurley-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                    <span class="pl-3 font-weight-bold text-white" style="font-size: 24px!important;">Emilia Hurley</span>
+                                    <span class="ml-auto points px-3 d-flex flex-column align-items-center text-white">68<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg text-white"></i>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card mb-2">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">5</span>
+                                    <img class="profile-img" src="fredrica-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                    <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">Fredrica Wampler</span>
+                                    <span class="ml-auto points px-3 d-flex flex-column align-items-center">52<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card mb-2">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">6</span>
+                                    <img class="profile-img" src="james-barker-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                    <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">Kyle Jackson</span>
+                                    <span class="ml-auto points px-3 d-flex flex-column align-items-center">50<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card league-card" style="margin-bottom:10rem;">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed w-100 d-flex align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <span class="pr-3 font-weight-bold" style="font-size: 24px!important;">7</span>
+                                    <img class="profile-img" src="emilia-hurley-profile.jpg" width="70" height="70" style="border-radius:50%;">
+                                    <span class="pl-3 font-weight-bold" style="font-size: 24px!important;">Holly Jones</span>
+                                    <span class="ml-auto points px-3 d-flex flex-column align-items-center">45<span style="font-size: 14px;margin-top:-10px;">pts</span></span><i class="far fa-arrow-alt-circle-down fa-lg"></i>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="sub-interactions">
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-gamepad pr-2"></i>
+                                            Send a Challenge
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-chart-bar pr-2"></i>
+                                            Compare Statistics
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-users pr-2"></i>
+                                            Compete in a Pub Quiz
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-center">
+                                            <i class="fas fa-beer pr-2"></i>
+                                            Share a Bill
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="row no-gutters d-flex justify-content-center fixed-bottom w-100">
+                
+                <!--Actual Navigation Bar-->
+                <ul class="navigation d-flex justify-content-around w-100">
+                    <li class="align-self-center"><a class="d-flex align-items-center flex-column" href="index.html"><i class="fas fa-th-large fa-lg pb-1"></i><span class="nav-item">Dashboard</span></a></li>
+                    <li class="align-self-center"><a class="d-flex align-items-center flex-column" href="league.html"><i class="fas fa-bars fa-lg pb-1"></i><span class="nav-item">League</span></a></li>
+                    <li class="align-self-center"><a class="d-flex align-items-center flex-column" href="summary.html"><i class="fas fa-chart-bar fa-lg pb-1"></i><span class="nav-item">Summary</span></a></li>
+                    <li class="align-self-center"><a class="d-flex align-items-center flex-column" href="profile.html"><i class="fas fa-user-alt fa-lg pb-1"></i><span class="nav-item">Profile</span></a></li>
+                </ul>
+
+                <button id="addBtn" class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -104,7 +104,7 @@ a {
     color: #4d4d4d!important;
 }
 
-.card {
+.league-card {
     border-radius: 30px!important;
     background-color: #fff!important;
 }
@@ -151,8 +151,14 @@ a {
     border-top-right-radius: 20px;
 }
 
+.navigation > li > a {
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
 
-
+.navigation > li > a:hover {
+    opacity: .7;
+}
 
 .btn-circle {
     width: 30px;
@@ -269,6 +275,8 @@ a {
     font-size: 36px;
 }
 
+
+
 .chart {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -329,11 +337,170 @@ a {
     position: relative;
 }
 
+/* League Styling */
 
 
+.icon-left-card {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD)!important;
+    border-top-left-radius: 30px!important;
+    border-bottom-left-radius: 30px!important;
+    border: none!important;
+}
 
+.icon-left-card > .card-body {
+    padding: 15px!important;
+}
 
+.challenge-content-card {
+    border-top-right-radius: 30px!important;
+    border-bottom-right-radius: 30px!important;
+    border: none!important;
+}
 
+.challenge-content-card > .card-body {
+    padding: 15px!important;
+}
+
+.challenge-active > .card > .card-body > .row > .col-10 > span:nth-child(1) {
+    display: block;
+    font-size: 14px;
+    color: #BB37AD;
+    font-family: 'SF UI Display Light';
+}
+
+.challenge-active > .card > .card-body > .row > .col-10 > span:nth-child(2) {
+    display: block;
+    font-size: 18px;
+    color: #4d4d4d;
+    font-family: 'SF UI Display Bold';
+}
+
+/* Summary Page Styling */
+
+.badge {
+    padding: 10px!important;
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD)!important;
+    font-family: 'SF UI Display Bold';
+    font-size: 20px!important;
+}
+
+.info-summary-card {
+    border-radius: 10px!important;
+    background-color: #ffffff!important;
+    box-shadow: 0px 3px 3px #aaaaaa;
+    font-family: 'SF UI Display Bold';
+    border: none!important;
+    width: 150px;
+}
+
+.info-summary-card > span:nth-child(1) {
+    font-size: 12px;
+}
+
+.info-summary-card > span:nth-child(2) {
+    font-size: 36px;
+}
+
+.weekly-rings-block {
+    border-radius: 30px!important;
+    border:none!important;
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.daily-ring-thurs::part(label) {
+    border-radius: 50%;
+    color: #FFA91F;
+}
+
+.drinks-label {
+    background-color: #F2F6FA;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 3px 3px #aaaaaa;
+    border-radius: 10px;
+    font-family: 'SF UI Display Bold';
+    color: #FFA91F;
+    font-size: 20px;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 25px 25px;
+    border-color: transparent transparent #F2F6FA transparent;
+}
+
+.drink-free-day {
+    background-color: #F2F6FA;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    font-family: 'SF UI Display Bold';
+    box-shadow: 0px 3px 3px #aaaaaa;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drunk {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD)!important;
+}
+
+.drink-free-key {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+}
+
+.drink-free-day-label {
+    font-family: 'SF UI Display Medium';
+    color: #4d4d4d;
+}
+
+/* Profile Page Styling */
+
+.number-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.edit-link {
+    color: #BB37AD!important;
+    font-family: 'SF UI Display Light';
+}
+
+.edit-picture {
+    background-color: #BB37AD;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    transform: translate(30px, 70px);
+}
+
+.edit-options {
+    padding: 60px;
+}
+
+.edit-options > li {
+    font-size: 24px;
+    font-family: 'SF UI Display Medium';
+}
+
+.badge {
+    background-color: #A60402!important;
+}
 
 
 /* Icon Colours */
@@ -352,4 +519,12 @@ a {
 
 .fa-user-alt {
     color: #3D2388!important; 
+}
+
+.fa-bell, .fa-edit, .fa-lock, .fa-question-circle, .fa-sign-out-alt {
+    color: #3D2388!important;
+}
+
+.fa-ellipsis-h {
+    color: #BB37AD;
 }
