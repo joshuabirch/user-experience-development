@@ -269,7 +269,7 @@ a {
     box-shadow: 0px 3px 3px #aaaaaa;
     font-family: 'SF UI Display Bold';
     border: none!important;
-    width: 150px;
+    width: 150px!important;
 }
 
 .info-card > span:nth-child(1) {
@@ -399,7 +399,6 @@ a {
     box-shadow: 0px 3px 3px #aaaaaa;
     font-family: 'SF UI Display Bold';
     border: none!important;
-    width: 150px!important;
 }
 
 .info-summary-card > span:nth-child(1) {
@@ -411,7 +410,7 @@ a {
 }
 
 .weekly-rings-block {
-    border-radius: 30px!important;
+    border-radius: 10px!important;
     border:none!important;
     box-shadow: 0px 3px 3px #aaaaaa;
 }
@@ -450,7 +449,8 @@ a {
     color: #4d4d4d;
     font-family: 'SF UI Display Bold';
     box-shadow: 0px 3px 3px #aaaaaa;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,12 +545,29 @@ a {
 @media (max-width: 576px) {
     .drawer-placement-bottom::part(base),
     .drawer-placement-bottom::part(overlay) {
-        --size: 150vw;
-        left: 0%;
+        --size: 150vw!important;
+        left: 0%!important;
+    }
+
+    .compare-statistics::part(base),
+    .compare-statistics::part(overlay),
+    .basketball::part(base),
+    .basketball::part(overlay) {
+        --size: 220vw!important;
+        left: 0%!important;
     }
 
     #drawerTitle::before {
         transform: translate(115px, -59.55px);
+    }
+
+    .name-tags {
+        font-size: 15px!important;
+    }
+
+    .chart {
+        grid-column-gap: 5px!important;
+        width: 75px;
     }
 
     .card-header {
@@ -571,8 +588,8 @@ a {
     }
 
     .profile-img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .icon-let-card {
@@ -600,10 +617,48 @@ a {
     }
 
     .info-summary-card > span:nth-child(1) {
-        font-size: 10px;
+        font-size: 14px;
     }
     
     .info-summary-card > span:nth-child(2) {
-        font-size: 24px;
+        font-size: 36px;
+    }
+
+    .drink-free-day {
+        margin-left: 2.111px;
+        margin-right: 2.111px;
+    }
+
+    .edit-picture {
+        transform: translate(30px, 70px);
+    }
+
+    .edit-options > li {
+        font-size: 18px!important;
+    }
+
+    #profile-edit-img {
+        width: 100px!important;
+        height: 100px!important;
+    }
+
+    .edit-options {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .drawer-placement-bottom::part(base),
+    .drawer-placement-bottom::part(overlay) {
+        --size: 90vw;
+        left: 19%;
+    }
+    
+    .compare-statistics::part(base),
+    .compare-statistics::part(overlay),
+    .basketball::part(base),
+    .basketball::part(overlay) {
+        --size: 130vw;
+        left: 19%;
     }
 }
