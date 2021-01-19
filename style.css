@@ -190,7 +190,7 @@ a {
     font-family: 'SF UI Display Light';
 }
 
-#drawerTitle::before {
+#drawerTitle::before, #pubDrawerTitle:before {
     content: '';
     width: 100px;
     padding: 5px;
@@ -343,6 +343,90 @@ a {
 
 .chart > span {
     position: relative;
+}
+
+#instructions {
+    font-family: 'SF UI Display Light';
+    font-size: 1.2rem;
+}
+
+
+#question {
+    font-size: 1.2rem;
+    font-family: 'SF UI Display Bold';
+    color: #3D2388;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.btn-answer {
+    background-color: #F2F6FA!important;
+    box-shadow: 0px 3px 3px #4d4d4d;
+    font-family: 'SF UI Display Bold';
+    width: 100%;
+    font-size: 1rem!important;
+    margin-bottom: 10px;
+    text-align: left!important;
+    padding-top: .9rem!important;
+    padding-bottom: .9rem!important;
+}
+
+.start-btn {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+    color: #fff!important;
+    padding-top: .7rem!important;
+    padding-bottom: .7rem!important;
+    width: 100%;
+    font-family: 'SF UI Display Medium'; 
+    font-size: 1.5rem!important;
+    border-radius: 20px!important;
+}
+
+.next-btn {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+    color: #fff!important;
+    padding-top: .7rem!important;
+    padding-bottom: .7rem!important; 
+    width: 100%;
+    font-family: 'SF UI Display Bold'; 
+    font-size: 1.2rem!important;
+    border-radius: 20px!important;
+}
+
+.btn-answer.correct {
+    background-color: #12B48F!important;
+    color: #fff!important;
+}
+
+.btn-answer.wrong {
+    background-color: #F14F4F!important;
+    color: #fff!important;
+}
+
+.hide {
+    display: none!important;
+}
+
+.close-btn {
+    background-image: linear-gradient(45deg, #3D2388, #BB37AD);
+    border-radius: 20px!important;
+    width: 100%;
+    color: #fff!important;
+    font-family: 'SF UI Display Medium';
+    font-size: 1.5rem!important;
+    padding-top: .7rem!important;
+    padding-bottom: .7rem!important;
+}
+
+.quiz-finished-header, .quiz-finished-score {
+    color:#3D2388!important;
+}
+
+#message {
+    text-align: center;
+    padding-top: 1rem;
+    font-family: 'SF UI Display Medium';
+    font-size: 1.2rem!important;
 }
 
 /* League Styling */
@@ -547,7 +631,9 @@ a {
 
 @media (max-width: 576px) {
     .drawer-placement-bottom::part(base),
-    .drawer-placement-bottom::part(overlay) {
+    .drawer-placement-bottom::part(overlay),
+    .pub-quiz::part(base),
+    .pub-quiz::part(overlay) {
         --size: 150vw!important;
         left: 0%!important;
     }
@@ -560,8 +646,8 @@ a {
         left: 0%!important;
     }
 
-    #drawerTitle::before {
-        transform: translate(115px, -59.55px);
+    #drawerTitle:before, #pubDrawerTitle:before {
+        transform: translate(120px, -59.55px);
     }
 
     .name-tags {
@@ -652,7 +738,9 @@ a {
 
 @media (max-width: 768px) {
     .drawer-placement-bottom::part(base),
-    .drawer-placement-bottom::part(overlay) {
+    .drawer-placement-bottom::part(overlay),
+    .pub-quiz::part(base),
+    .pub-quiz::part(overlay)  {
         --size: 90vw;
         left: 19%;
     }

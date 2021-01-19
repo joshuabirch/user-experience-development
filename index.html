@@ -26,6 +26,8 @@
     <script type="text/javascript" src="phaser.min.js"></script>
     <script type="text/javascript" src="basketball.js"></script>
 
+    <script defer src="quiz.js"></script>
+
     <!--Title of Page-->
     <title>Reduce.</title>
     
@@ -360,10 +362,34 @@
                 </sl-drawer>
 
                 <!--Pub Quiz-->
-                <sl-drawer placement="bottom" class="pub-quiz" style="--size:30vw;">
-                    <h3 id="drawerTitle" class="text-center font-weight-bold px-md-5">How Does Your Stats Compare With James?</h3>
+                <sl-drawer placement="bottom" class="pub-quiz" style="--size:35vw;">
+                    <h3 id="pubDrawerTitle" class="text-center font-weight-bold px-md-5">You're Challenging James!</h3>
+                        <p id="instructions" class="text-center py-2 px-4">Answer the questions correctly to gain some extra points! Good Luck!</p>
+                        <div class="quiz-container pt-md-5">
+                            <div id="question-container" class="hide">
+                                <div id="question" class="d-flex justify-content-center pb-2">Question</div>
+                                <div id="answer-btns" class="btn-grid d-flex flex-column mt-2 p-md-3">
+                                    <button class="btn btn-answer">Answer 1</button>
+                                    <button class="btn btn-answer">Answer 2</button>
+                                    <button class="btn btn-answer">Answer 3</button>
+                                    <button class="btn btn-answer">Answer 4</button>
+                                </div>
+                            </div>
+                            <div class="controls d-flex justify-content-center align-items-center">
+                                <button id="start-btn" class="start-btn btn mt-5">Start</button>
+                                <button id="next-btn" class="next-btn btn hide">Next</button>
+                            </div>
+                        </div>
 
-
+                        <div id="finished-container" class="quiz-finished-container hide mt-3">
+                            <div class="d-flex justify-content-center flex-column align-items-center">
+                                <i class="far fa-7x fa-check-circle" style="color:#3D2388;"></i>
+                                <h1 class="quiz-finished-header">Quiz Completed</h1>
+                                <h2 class="quiz-finished-score">Your Score: <span id="score"></span></h2>
+                                <p id="message">These points have been added to your total, send a challenge to James to see if he can do better!</p>
+                                <button id="close-btn" class="close-btn btn mt-md-5">Send</button>
+                            </div>
+                        </div>
                 </sl-drawer>
 
                 <!--Quiz-->
