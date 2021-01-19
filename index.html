@@ -28,6 +28,8 @@
 
     <script defer src="quiz.js"></script>
 
+    <script defer src="split-bill.js"></script>
+
     <!--Title of Page-->
     <title>Reduce.</title>
     
@@ -392,10 +394,6 @@
                         </div>
                 </sl-drawer>
 
-                <!--Quiz-->
-
-                <!--Share a Bill-->
-
                 <!--Add Button on Navigation-->
                 <button id="addBtn" class="btn-circle btn-xl" href="#" role="button"><i class="fas fa-plus"></i></button>
             </div>     
@@ -439,16 +437,27 @@
         })();
     </script>
 
-<script>
-    (() => {
-       const drawer = document.querySelector('.pub-quiz');
-       const openButton = document.getElementById('pub-quiz');
-       const closeButton = drawer.querySelector('sl-button[type="primary"]');
+    <script>
+        (() => {
+        const drawer = document.querySelector('.pub-quiz');
+        const openButton = document.getElementById('pub-quiz');
+        const closeButton = drawer.querySelector('sl-button[type="primary"]');
 
-       openButton.addEventListener('click', () => drawer.show());
-       closeButton.addEventListener('click', () => drawer.hide());
-   })();
-</script>
+        openButton.addEventListener('click', () => drawer.show());
+        closeButton.addEventListener('click', () => drawer.hide());
+    })();
+    </script>
+
+    <script>
+        (() => {
+            const drawer = document.querySelector('.share-bill');
+            const openButton = document.getElementById('share-bill');
+            const closeButton = drawer.querySelector('sl-button[type="primary"]');
+
+            openButton.addEventListener('click', () => drawer.show());
+            closeButton.addEventListener('click', () => drawer.hide());
+        })();
+    </script>
 
     <script>
         //add functionality to the add drinks ring
