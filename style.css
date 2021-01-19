@@ -207,7 +207,9 @@ a {
 .compare-statistics::part(base),
 .compare-statistics::part(overlay),
 .basketball::part(base),
-.basketball::part(overlay)   {
+.basketball::part(overlay),
+.pub-quiz::part(base),
+.pub-quiz::part(overlay)   {
     max-width: 500px!important;
     left: 37.2%;
 }
@@ -218,7 +220,8 @@ a {
 
 .drawer-placement-bottom::part(panel),
 .compare-statistics::part(panel),
-.basketball::part(panel) {
+.basketball::part(panel),
+.pub-quiz::part(panel) {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }

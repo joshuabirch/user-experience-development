@@ -105,7 +105,7 @@
             <!--League Text-->
             <div class="row no-gutters d-flex align-items-center">
                 <h3 class="my-4 align-self-center">Your League</h2>
-                <h5 class="ml-auto my-4 align-self-end"><a class="link-dark" href="#">View all <i class="fas fa-chevron-right fa-xs"></i></a></h5>
+                <h5 class="ml-auto my-4 align-self-end"><a class="link-dark" href="league.html">View all <i class="fas fa-chevron-right fa-xs"></i></a></h5>
             </div>
 
             <!--League Cards-->
@@ -359,6 +359,13 @@
                     </div>
                 </sl-drawer>
 
+                <!--Pub Quiz-->
+                <sl-drawer placement="bottom" class="pub-quiz" style="--size:30vw;">
+                    <h3 id="drawerTitle" class="text-center font-weight-bold px-md-5">How Does Your Stats Compare With James?</h3>
+
+
+                </sl-drawer>
+
                 <!--Quiz-->
 
                 <!--Share a Bill-->
@@ -405,6 +412,17 @@
             closeButton.addEventListener('click', () => drawer.hide());
         })();
     </script>
+
+<script>
+    (() => {
+       const drawer = document.querySelector('.pub-quiz');
+       const openButton = document.getElementById('pub-quiz');
+       const closeButton = drawer.querySelector('sl-button[type="primary"]');
+
+       openButton.addEventListener('click', () => drawer.show());
+       closeButton.addEventListener('click', () => drawer.hide());
+   })();
+</script>
 
     <script>
         //add functionality to the add drinks ring
