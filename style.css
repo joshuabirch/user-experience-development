@@ -223,11 +223,16 @@ a {
     border-top-right-radius: 30px;
 }
 
+.drawer-placement-bottom::part(close-button):hover {
+    color: #3D2388!important;
+}
+
 .daily-ring::part(label) {
     font-size: 12px;
     font-weight: bold;
     font-family: 'SF UI Display Bold';
 }
+
 
 #minus-btn::part(base), #add-btn::part(base) {
     background-image: linear-gradient(45deg, #3D2388, #BB37AD);
@@ -377,6 +382,10 @@ a {
 
 /* Summary Page Styling */
 
+.title {
+    width: 75%;
+}
+
 .badge {
     padding: 10px!important;
     background-image: linear-gradient(45deg, #3D2388, #BB37AD)!important;
@@ -390,7 +399,7 @@ a {
     box-shadow: 0px 3px 3px #aaaaaa;
     font-family: 'SF UI Display Bold';
     border: none!important;
-    width: 150px;
+    width: 150px!important;
 }
 
 .info-summary-card > span:nth-child(1) {
@@ -475,6 +484,9 @@ a {
     font-size: 16px;
 }
 
+
+
+
 .edit-link {
     color: #BB37AD!important;
     font-family: 'SF UI Display Light';
@@ -527,4 +539,71 @@ a {
 
 .fa-ellipsis-h {
     color: #BB37AD;
+}
+
+
+@media (max-width: 576px) {
+    .drawer-placement-bottom::part(base),
+    .drawer-placement-bottom::part(overlay) {
+        --size: 150vw;
+        left: 0%;
+    }
+
+    #drawerTitle::before {
+        transform: translate(115px, -59.55px);
+    }
+
+    .card-header {
+      padding-top: .75rem!important; 
+    }
+
+    .btn-link {
+        padding: .45rem .65rem!important;
+    }
+
+    .btn-link {
+        padding: 0!important;
+    }
+
+    .fs-mb {
+        font-size: 1.2rem!important;
+        text-align: left;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-let-card {
+        width: 25%!important;
+    }
+
+    .card-group {
+        display: flex!important;
+        flex-flow: row wrap;
+        justify-content: center!important;
+    }
+
+    .icon-left-card {
+        flex-grow: .5!important;
+        border-top-right-radius: 0px!important;
+        border-bottom-right-radius: 0px!important;
+    }
+
+    .challenge-content-card {
+        flex-grow: 1;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .info-summary-card > span:nth-child(1) {
+        font-size: 10px;
+    }
+    
+    .info-summary-card > span:nth-child(2) {
+        font-size: 24px;
+    }
 }

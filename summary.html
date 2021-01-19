@@ -32,121 +32,127 @@
         <div class="container" style="max-width:500px!important;">
 
             <!--Title & Month Badge-->
-            <div class="row d-flex justify-content-center flex-column align-items-center" style="margin-top: 5rem;">
-                <h1 class="w-75 text-center">How Well Are You Doing?</h1>
-                <span class="badge rounded-pill text-white mt-3">April 2021</span>
-            </div>  
-
-            <!--Data Blocks-->
-            <div class="row d-flex justify-content-center flex-column">
+            <div class="container-fluid">
                 
-                <!--Snippet Data-->
-                <div class="d-flex justify-content-center mt-3" style="color:#3D2388;">
-                    <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
-                        <span>Total Drinks So far</span>
-                        <span>42</span>
+                <div class="row d-flex justify-content-center flex-column align-items-center text-center" style="margin-top: 5rem;">
+                    <h1 class="title text-center">How Well Are You Doing?</h1>
+                    <span class="badge rounded-pill text-white mt-3">April 2021</span>
+                </div>  
+            
+            
+                <!--Data Blocks-->
+                <div class="row d-flex justify-content-center flex-column">
+                    
+                    <!--Snippet Data-->
+                    <div class="d-flex justify-content-center mt-3" style="color:#3D2388;">
+                        <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
+                            <span>Total Drinks So far</span>
+                            <span>42</span>
+                        </div>
+                        <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
+                            <span>Est. Money Spent</span>
+                            <span>£210</span>
+                        </div>
+                        <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
+                            <span>Rolling Average</span>
+                            <span>1.35</span>
+                        </div>
                     </div>
-                    <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
-                        <span>Est. Money Spent</span>
-                        <span>£210</span>
-                    </div>
-                    <div class="card info-summary-card py-2 mt-3 mx-2 text-center">
-                        <span>Rolling Average</span>
-                        <span>1.35</span>
-                    </div>
-                </div>
 
-                <!--Day of the Week Block-->
-                <div class="card p-3 weekly-rings-block mt-3">
-                    <h3 class="text-center">Today, April 5th 2021</h3>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <sl-progress-ring class="daily-ring" percentage="90" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">M</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring" percentage="70" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring" percentage="60" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">W</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring daily-ring-thurs" percentage="40" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring" percentage="50" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">F</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring" percentage="70" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
-                        <sl-progress-ring class="daily-ring" percentage="68" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
+                    <!--Day of the Week Block-->
+                    <div class="card p-3 weekly-rings-block mt-3 mx-2">
+                        <h3 class="text-center">Today, April 5th 2021</h3>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <sl-progress-ring class="daily-ring" percentage="90" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">M</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring" percentage="70" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring" percentage="60" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">W</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring daily-ring-thurs" percentage="40" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">T</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring" percentage="50" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">F</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring" percentage="70" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
+                            <sl-progress-ring class="daily-ring" percentage="68" size="50" style="--track-color: #ABABAB; --indicator-color: #3D2388;">S</sl-progress-ring>
+                        </div>
+                        <div class="row d-flex flex-column justify-content-center align-items-center mt-2">
+                            <div id="triangle"></div>
+                            <span class="drinks-label">3 drinks</span>
+                        </div>
                     </div>
-                    <div class="row d-flex flex-column justify-content-center align-items-center mt-2">
-                        <div id="triangle"></div>
-                        <span class="drinks-label">3 drinks</span>
-                    </div>
-                </div>
 
-                <!--Weekly Progress-->
-                <div class="card p-3 weekly-rings-block mt-3">
-                    <h3 class="text-center">Weekly Progress</h3>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="chart">
-                            <div class="barchart-1"></div>
-                            <div class="barchart-2"></div>
-                        </div>
-                        <div class="chart">
-                            <div class="barchart-3"></div>
-                            <div class="barchart-4"></div>
-                        </div>
-                        <div class="chart">
-                            <div class="barchart-5"></div>
-                            <div class="barchart-6"></div>
-                        </div>
-                        <div class="chart">
-                            <div class="barchart-7"></div>
-                            <div class="barchart-8"></div>
+                    <!--Weekly Progress-->
+                    <div class="card p-3 weekly-rings-block mt-3 mx-2">
+                        <h3 class="text-center">Weekly Progress</h3>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="chart">
+                                <div class="barchart-1"></div>
+                                <div class="barchart-2"></div>
+                            </div>
+                            <div class="chart">
+                                <div class="barchart-3"></div>
+                                <div class="barchart-4"></div>
+                            </div>
+                            <div class="chart">
+                                <div class="barchart-5"></div>
+                                <div class="barchart-6"></div>
+                            </div>
+                            <div class="chart">
+                                <div class="barchart-7"></div>
+                                <div class="barchart-8"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!--Drink Free Days-->
-                <div class="card p-3 weekly-rings-block mt-3" style="margin-bottom: 10rem;">
-                    <h3 class="text-center">Drink Free Days</h3>
-                    <div class="row d-flex justify-content-center align-items-center mt-3">
-                        <span class="drink-free-day">1</span>
-                        <span class="drink-free-day">2</span>
-                        <span class="drink-free-day">3</span>
-                        <span class="drink-free-day">4</span>
-                        <span class="drink-free-day">5</span>
-                        <span class="drink-free-day">6</span>
+                    <!--Drink Free Days-->
+                    <div class="card p-3 weekly-rings-block mt-3 mx-2" style="margin-bottom: 10rem;">
+                        <h3 class="text-center">Drink Free Days</h3>
+                        <div class="row d-flex justify-content-center align-items-center mt-3">
+                            <span class="drink-free-day">1</span>
+                            <span class="drink-free-day">2</span>
+                            <span class="drink-free-day">3</span>
+                            <span class="drink-free-day">4</span>
+                            <span class="drink-free-day">5</span>
+                            <span class="drink-free-day">6</span>
+                        </div>
+                        <div class="row d-flex justify-content-center mt-2 align-items-center">
+                            <span class="drink-free-day">7</span>
+                            <span class="drink-free-day">8</span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day">12</span>
+                        </div>
+                        <div class="row d-flex justify-content-center mt-2 align-items-center">
+                            <span class="drink-free-day">13</span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day">16</span>
+                            <span class="drink-free-day">17</span>
+                            <span class="drink-free-day">18</span>
+                        </div>
+                        <div class="row d-flex justify-content-center mt-2 align-items-center">
+                            <span class="drink-free-day">19</span>
+                            <span class="drink-free-day">20</span>
+                            <span class="drink-free-day">21</span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day drunk"></span>
+                        </div>
+                        <div class="row d-flex justify-content-start mt-2 ml-3 align-items-center">
+                            <span class="drink-free-day">25</span>
+                            <span class="drink-free-day">26</span>
+                            <span class="drink-free-day drunk"></span>
+                            <span class="drink-free-day">28</span>
+                            <span class="drink-free-day">29</span>
+                            <span class="drink-free-day drunk"></span>
+                        </div>
+                        <div class="row d-flex justify-content-center mt-4">
+                            <span class="drink-free-key"></span>
+                            <p class="drink-free-day-label pl-2">Days Where You Have Drunk</p>
+                        </div>
                     </div>
-                    <div class="row d-flex justify-content-center mt-2 align-items-center">
-                        <span class="drink-free-day">7</span>
-                        <span class="drink-free-day">8</span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day">12</span>
-                    </div>
-                    <div class="row d-flex justify-content-center mt-2 align-items-center">
-                        <span class="drink-free-day">13</span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day">16</span>
-                        <span class="drink-free-day">17</span>
-                        <span class="drink-free-day">18</span>
-                    </div>
-                    <div class="row d-flex justify-content-center mt-2 align-items-center">
-                        <span class="drink-free-day">19</span>
-                        <span class="drink-free-day">20</span>
-                        <span class="drink-free-day">21</span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day drunk"></span>
-                    </div>
-                    <div class="row d-flex justify-content-start mt-2 ml-4 align-items-center">
-                        <span class="drink-free-day">25</span>
-                        <span class="drink-free-day">26</span>
-                        <span class="drink-free-day drunk"></span>
-                        <span class="drink-free-day">28</span>
-                        <span class="drink-free-day">29</span>
-                        <span class="drink-free-day drunk"></span>
-                    </div>
-                    <div class="row d-flex justify-content-center mt-4">
-                        <span class="drink-free-key"></span>
-                        <p class="drink-free-day-label pl-2">Days Where You Have Drunk</p>
-                    </div>
+                
                 </div>
 
             </div>
+
 
             <!--Navigation-->
             <div class="row no-gutters d-flex justify-content-center fixed-bottom w-100">
